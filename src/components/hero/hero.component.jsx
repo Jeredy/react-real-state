@@ -61,12 +61,12 @@ function Hero({ slides }) {
               {index === current && (
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
-                  <HeroContent>
+                  <HeroContent className="heroContent">
                     <h1>{slide.title}</h1>
                     <p>{slide.price}</p>
                     <Button
                       to={slide.path}
-                      primary={true}
+                      primary="true"
                       css={`
                         max-width: 160px;
                       `}

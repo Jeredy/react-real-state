@@ -13,18 +13,20 @@ import { menuData } from "../../data/menuData";
 
 function Navbar({ toggle }) {
   return (
-    <Nav>
-      <Logo to="/">ELIXIR</Logo>
+    <Nav className="navbarReveal">
+      <Logo to="/" className="navbarReveal">
+        ELIXIR
+      </Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
+          <NavMenuLinks to={item.link} key={index} className="navbarReveal">
             {item.title}
           </NavMenuLinks>
         ))}
       </NavMenu>
       <NavBtn>
-        <Button primary={true} to="/contact">
+        <Button primary="true" to="/contact">
           Contact Us
         </Button>
       </NavBtn>
