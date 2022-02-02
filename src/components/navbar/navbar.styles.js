@@ -1,23 +1,24 @@
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { SiAltiumdesigner } from "react-icons/si";
 
 export const Nav = styled.nav`
-  height: 50px;
+  height: 55px;
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 100;
   position: fixed;
   width: 100%;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 
   &.active {
-    background: rgba(255, 255, 255, 0.9);
-    background-filter: blue(20px);
-    box-shadow: 0 2px 10px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 2px 10px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 2px 10px rgba(56, 125, 255, 0.017));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-filter: drop-shadow(0 1px 8px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   }
 `;
 
@@ -29,10 +30,23 @@ const NavLink = css`
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
 
   &.active {
-    color: #000d1a;
+    color: #18171c;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+export const LogoIcon = styled(SiAltiumdesigner)`
+  font-size: 2rem;
+  fill: white;
+  margin-right: 6px;
+  transition: all 0.5s ease;
+
+  &.active {
+    fill: #18171c;
   }
 `;
 

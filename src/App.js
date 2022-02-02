@@ -3,7 +3,9 @@ import Dropdown from "./components/dropdown/dropdown.component";
 import Hero from "./components/hero/hero.component";
 import InfoSection from "./components/infoSection/infoSection.component";
 import Navbar from "./components/navbar/navbar.component";
-import { InfoData } from "./data/infoData";
+import TitleSection from "./components/titleSection/titleSection.component";
+import WorkComponent from "./components/workSection/workSection.component";
+import { InfoData, InfoDataTwo } from "./data/infoData";
 import { SliderData } from "./data/sliderData";
 import GlobalStyle from "./globalStyles";
 
@@ -25,13 +27,14 @@ function App() {
     for (let i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let revealTop = reveals[i].getBoundingClientRect().top;
-      let revealPoint = 250;
+      let revealPoint = 80;
 
       if (revealTop < windowHeight - revealPoint) {
         reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+      } 
+      // else {
+      //   reveals[i].classList.remove("active");
+      // }
     }
   }
 
@@ -42,7 +45,7 @@ function App() {
     for (let i = 0; i < navbarReveal.length; i++) {
       let windowHeight = window.innerHeight / 2;
       let revealTop = heroReveal.getBoundingClientRect().bottom;
-      let revealPoint = 100;
+      let revealPoint = 10;
 
       if (revealTop < windowHeight - revealPoint) {
         navbarReveal[i].classList.add("active");
@@ -58,7 +61,10 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
+      <TitleSection />
+      <WorkComponent />
       <InfoSection {...InfoData} />
+      <InfoSection {...InfoDataTwo} />
     </>
   );
 }

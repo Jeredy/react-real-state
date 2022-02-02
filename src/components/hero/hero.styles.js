@@ -44,10 +44,11 @@ export const HeroSlider = styled.div`
     left: 0;
     overflow: hidden;
     opacity: 0.6;
-    background: linear-gradient(0deg,
+    background: linear-gradient(
+      0deg,
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.6) 100%
+      rgba(0, 0, 0, 0.7) 100%
     );
   }
 `;
@@ -59,6 +60,25 @@ export const HeroImage = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  // -webkit-animation: reveal 1s ease-in;
+  // -webkit-animation-fill-mode: backwards;
+
+  @-webkit-keyframes reveal {
+    0% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes reveal {
+    0% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -94,7 +114,7 @@ const ArrowButtons = css`
   height: 50px;
   color: #fff;
   cursor: pointer;
-  background-color: #000d1a;
+  background-color: #18171c;
   border-radius: 50px;
   padding: 10px;
   margin-right: 1rem;
@@ -102,7 +122,8 @@ const ArrowButtons = css`
   transition: 0.3s;
 
   &:hover {
-    background: #cd853f;
+    background: #fff;
+    color: #18171c;
     transform: scale(1.05);
   }
 `;

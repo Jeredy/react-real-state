@@ -6,6 +6,7 @@ import {
   NavMenu,
   NavMenuLinks,
   NavBtn,
+  LogoIcon,
 } from "./navbar.styles";
 import { Button } from "../button/button.styles";
 
@@ -15,19 +16,20 @@ function Navbar({ toggle }) {
   return (
     <Nav className="navbarReveal">
       <Logo to="/" className="navbarReveal">
-        ELIXIR
+        <LogoIcon className="navbarReveal" />
+         A.S DESIGN
       </Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index} className="navbarReveal">
-            {item.title}
+            {item.title.toUpperCase()}
           </NavMenuLinks>
         ))}
       </NavMenu>
       <NavBtn>
         <Button primary="true" to="/contact">
-          Contact Us
+          CONTACT US
         </Button>
       </NavBtn>
     </Nav>
