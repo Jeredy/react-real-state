@@ -6,8 +6,8 @@ function WorkComponent() {
   return (
     <Section >
       <CardContainer>
-        {sectionData.map(({ image, title, text }) => (
-          <Card className="revealSection">
+        {sectionData.map(({ image, title, text }, index) => (
+          <Card className="revealSection" key={index}>
             <Image src={image} />
             <h1>{title}</h1>
             <p>{text}</p>

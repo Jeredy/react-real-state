@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { SiAltiumdesigner } from "react-icons/si";
+import { SiArlo } from "react-icons/si";
 
 export const Nav = styled.nav`
   height: 55px;
@@ -39,7 +39,7 @@ const NavLink = css`
   }
 `;
 
-export const LogoIcon = styled(SiAltiumdesigner)`
+export const LogoIcon = styled(SiArlo)`
   font-size: 2rem;
   fill: white;
   margin-right: 6px;

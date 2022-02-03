@@ -8,6 +8,7 @@ import {
   LogoBottomLine,
   Icon,
   SocialMediaContainer,
+  IconLink,
 } from "./footer.styles";
 
 function Fotter() {
@@ -20,8 +21,10 @@ function Fotter() {
 
         <SocialMediaContainer>
           <LogoBottomLine />
-          {socialMediaData.map((item) => (
-            <Icon icon={item.icon} />
+          {socialMediaData.map(({ icon }, index) => (
+            <IconLink to="/" key={index}>
+              <Icon icon={icon} />
+            </IconLink>
           ))}
           <LogoBottomLine />
         </SocialMediaContainer>

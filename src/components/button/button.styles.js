@@ -14,10 +14,11 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
+  padding: ${({ big }) => (big ? "10px 30px" : "10px 20px")};
   color: ${({ primary }) => (!!primary ? "#fff" : "#18171c")};
-  font-size: ${({ big }) => (big ? "20px" : "14px")};
+  font-size: ${({ big }) => (big ? "1.1rem" : "1rem")};
   font-weight: 400;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2);
   &:hover {
     transform: translateY(-2px);
   }

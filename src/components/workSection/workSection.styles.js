@@ -7,11 +7,12 @@ export const Section = styled.div`
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  background-image: url("https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  position: relative;
+  margin-bottom: 3rem;
+  background-image: url("https://images.pexels.com/photos/1046348/pexels-photo-1046348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 
   &::before {
     content: "";
@@ -25,8 +26,8 @@ export const Section = styled.div`
     opacity: 0.6;
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
       rgba(0, 0, 0, 0.7) 100%
     );
   }
@@ -57,14 +58,14 @@ export const Card = styled.div`
   margin: 1rem;
 
   &.revealSection {
-    transform: translateY(3rem);
+    transform: translateY(6rem);
     position: relative;
     opacity: 0;
   }
 
   &.active {
     transform: translateY(0rem);
-    transition: all 1s ease;
+    transition: all 2s ease;
     opacity: 1;
   }
 

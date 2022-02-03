@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SiAltiumdesigner } from "react-icons/si";
+import { SiArlo } from "react-icons/si";
 
 export const Container = styled.div`
   height: ${({ logo }) => (logo ? "380px" : "200px")};
@@ -49,7 +49,7 @@ export const LogoBottomLine = styled.div`
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.1));
 `;
 
-export const LogoIcon = styled(SiAltiumdesigner)`
+export const LogoIcon = styled(SiArlo)`
   font-size: 3.5rem;
   fill: #18171c;
   margin-right: 6px;

@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components/macro";
-import { SiAltiumdesigner } from "react-icons/si";
+import { SiArlo } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const ContentSize = css`
-  height: 70vh;
+  height: 65vh;
   width: 100%;
 `;
 
@@ -12,7 +13,7 @@ export const FooterContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   postion: relative;
-  padding-top: 2rem;
+  margin-top: 5rem;
 `;
 
 export const ImageBackground = styled.div`
@@ -21,7 +22,7 @@ export const ImageBackground = styled.div`
   position: absolute;
   z-index: 11;
 
-  background-image: url("https://images.pexels.com/photos/3214064/pexels-photo-3214064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +45,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  z-index: 22;
+  z-index: 999;
 
   &.revealSection {
     transform: translateY(4rem);
@@ -82,7 +83,7 @@ export const LogoBottomLine = styled.div`
   margin: 1rem 0rem;
 `;
 
-export const LogoIcon = styled(SiAltiumdesigner)`
+export const LogoIcon = styled(SiArlo)`
   font-size: 3.5rem;
   fill: #18171c;
   margin-bottom: 1rem;
@@ -96,8 +97,20 @@ export const SocialMediaContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 350px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Icon = styled(({ icon }) => icon)`
-  font-size: 3.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: red;
+  display: block;
+`;
+
+export const IconLink = styled(Link)`
+  &:hover {
+    cursor: pointer;
+  }
 `;
