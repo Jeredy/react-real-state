@@ -63,22 +63,22 @@ export const HeroImage = styled.img`
   // -webkit-animation: reveal 1s ease-in;
   // -webkit-animation-fill-mode: backwards;
 
-  @-webkit-keyframes reveal {
-    0% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes reveal {
-    0% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  // @-webkit-keyframes reveal {
+  //   0% {
+  //     opacity: 0.8;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
+  // @keyframes reveal {
+  //   0% {
+  //     opacity: 0.8;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 `;
 
 export const HeroContent = styled.div`

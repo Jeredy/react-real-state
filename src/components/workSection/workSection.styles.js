@@ -56,11 +56,23 @@ export const Card = styled.div`
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   margin: 1rem;
 
+  &.revealSection {
+    transform: translateY(3rem);
+    position: relative;
+    opacity: 0;
+  }
+
+  &.active {
+    transform: translateY(0rem);
+    transition: all 1s ease;
+    opacity: 1;
+  }
+
   h1 {
     font-size: clamp(0.7rem, 8vw, 1.1rem);
     font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
     margin-bottom: 0.7rem;
   }
 
@@ -70,7 +82,7 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 80px;
-  wight: 80px;
+  width: 50px;
+  wight: 50px;
   margin-bottom: 1rem;
 `;

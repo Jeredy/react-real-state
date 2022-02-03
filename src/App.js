@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "./components/dropdown/dropdown.component";
+import Footer from "./components/footer/footer.component";
 import Hero from "./components/hero/hero.component";
 import InfoSection from "./components/infoSection/infoSection.component";
 import Navbar from "./components/navbar/navbar.component";
@@ -7,6 +8,7 @@ import TitleSection from "./components/titleSection/titleSection.component";
 import WorkComponent from "./components/workSection/workSection.component";
 import { InfoData, InfoDataTwo } from "./data/infoData";
 import { SliderData } from "./data/sliderData";
+import { titleDataOne, titleDataTwo } from "./data/titleData";
 import GlobalStyle from "./globalStyles";
 
 function App() {
@@ -17,24 +19,23 @@ function App() {
   };
 
   window.addEventListener("scroll", () => {
-    reveal();
+    reveal(".reveal", 80);
+    reveal(".revealSection", 20);
     navbarReveal();
   });
 
-  function reveal() {
-    let reveals = document.querySelectorAll(".reveal");
+  function reveal(classe, revealPoint) {
+    let reveals = document.querySelectorAll(classe);
 
     for (let i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let revealTop = reveals[i].getBoundingClientRect().top;
-      let revealPoint = 80;
 
       if (revealTop < windowHeight - revealPoint) {
         reveals[i].classList.add("active");
-      } 
-      // else {
-      //   reveals[i].classList.remove("active");
-      // }
+      } else {
+        reveals[i].classList.remove("active");
+      }
     }
   }
 
@@ -61,10 +62,12 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
-      <TitleSection />
+      <TitleSection logo={true} {...titleDataOne} />
       <WorkComponent />
+      <TitleSection {...titleDataTwo} />
       <InfoSection {...InfoData} />
       <InfoSection {...InfoDataTwo} />
+      <Footer />
     </>
   );
 }

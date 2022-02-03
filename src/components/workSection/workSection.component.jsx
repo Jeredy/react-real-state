@@ -4,10 +4,10 @@ import { CardContainer, Section, Card, Image } from "./workSection.styles";
 
 function WorkComponent() {
   return (
-    <Section>
+    <Section >
       <CardContainer>
         {sectionData.map(({ image, title, text }) => (
-          <Card>
+          <Card className="revealSection">
             <Image src={image} />
             <h1>{title}</h1>
             <p>{text}</p>

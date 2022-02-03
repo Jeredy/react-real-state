@@ -1,16 +1,17 @@
 import React from "react";
 import { Container, LogoBottomLine, LogoIcon } from "./titleSection.styles";
 
-function TitleSection() {
+function TitleSection({ logo, title, paragraph }) {
   return (
-    <Container>
-      <LogoIcon />
-      <LogoBottomLine />
-      <h1>Your home worth it..</h1>
-      <p>
-        Magna ex commodo ut ullamco reprehenderit do enim deserunt Lorem culpa
-        qui enim consequat cupidatat.
-      </p>
+    <Container className="revealSection" logo={logo}>
+      {logo && (
+        <>
+          <LogoIcon />
+          <LogoBottomLine />
+        </>
+      )}
+      <h1>{title}</h1>
+      <p>{paragraph}</p>
     </Container>
   );
 }

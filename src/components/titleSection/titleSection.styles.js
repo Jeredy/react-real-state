@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { SiAltiumdesigner } from "react-icons/si";
 
 export const Container = styled.div`
-  height: 380px;
+  height: ${({ logo }) => (logo ? "380px" : "200px")};
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 4rem 0rem;
+  padding: ${({ logo }) => (logo ? "4rem" : "0rem")} 0rem;
 
   h1 {
     color: #18171c;
@@ -22,6 +22,18 @@ export const Container = styled.div`
     text-align: center;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     max-width: 500px;
+  }
+
+  &.revealSection {
+    transform: translateY(4rem);
+    position: relative;
+    opacity: 0;
+  }
+
+  &.active {
+    transform: translateY(0rem);
+    transition: all 1s ease-in;
+    opacity: 1;
   }
 `;
 
