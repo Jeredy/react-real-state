@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html, body {
-        over-flow-x: hidden;
+        overflow-x: hidden;
     }
 `;
 

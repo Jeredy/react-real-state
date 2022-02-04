@@ -68,6 +68,7 @@ export const Card = styled.div`
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   margin: 1rem;
   max-width: 250px;
+  transition: all 2s ease;
 
   &.revealSection {
     transform: translateY(6rem);
@@ -77,7 +78,6 @@ export const Card = styled.div`
 
   &.active {
     transform: translateY(0rem);
-    transition: all 2s ease;
     opacity: 1;
   }
 
@@ -95,7 +95,7 @@ export const Card = styled.div`
 
   @media screen and (max-width: 480px) {
     height: 250px;
-    width: 300px;
+    min-width: 300px;
   }
 `;
 

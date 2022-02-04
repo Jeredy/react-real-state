@@ -37,6 +37,7 @@ export const ColumnLeft = styled.div`
   max-height: 50vh;
   background: #18171c;
   color: #fff;
+  transition: all 2s ease;
 
   filter: drop-shadow(
     ${({ reverse }) => (reverse ? "8px" : "-8px")} 8px 10px rgba(0, 0, 0, 0.6)
@@ -65,7 +66,6 @@ export const ColumnLeft = styled.div`
     transform: translateX(
       calc(${({ reverse }) => (reverse ? "100% - 55%" : "10%")})
     );
-    transition: all 2s ease;
     opacity: 1;
   }
 
@@ -98,6 +98,7 @@ export const ColumnRight = styled.div`
   max-width: 650px;
   align-items: center;
   z-index: 22;
+  transition: all 2s ease;
 
   @media screen and (max-width: 768px) {
     order: ${({ reverse }) => (reverse ? "2" : "1")};
@@ -111,7 +112,6 @@ export const ColumnRight = styled.div`
 
   &.active {
     transform: translateX(calc(${({ reverse }) => (reverse ? "10%" : "25%")}));
-    transition: all 2s ease;
     opacity: 1;
   }
 
