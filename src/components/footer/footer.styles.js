@@ -7,7 +7,7 @@ const ContentSize = css`
   width: 100%;
 
   @media screen and (max-width: 760px) {
-    height: 80vh;
+    height: 70vh;
   }
 `;
 

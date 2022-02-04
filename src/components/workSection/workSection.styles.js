@@ -33,7 +33,7 @@ export const Section = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: 150vh;
+    height: 1200px;
     background-image: src("images/plant.png");
     background-size: cover;
   }
@@ -47,6 +47,7 @@ export const CardContainer = styled.div`
 
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;
+    height: 1200px;
   }
 `;
 

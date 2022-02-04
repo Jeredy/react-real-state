@@ -29,14 +29,13 @@ function App() {
     for (let i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let revealTop = reveals[i].getBoundingClientRect().top;
-      classe === ".revealSection" && console.log(revealTop);
 
       if (revealTop < windowHeight - revealPoint) {
         reveals[i].classList.add("active");
       }
-      // else {
-      //   reveals[i].classList.remove("active");
-      // }
+      else {
+        reveals[i].classList.remove("active");
+      }
     }
   }
 

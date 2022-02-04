@@ -2,24 +2,26 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   width: 100%;
-  height: 100%;
+  height: 620px;
   padding-top: 1rem;
+  display: flex;
 
   @media screen and (max-width: 760px) {
-    margin-bottom: 3rem;
+    padding-top: 0rem;
+    height: 750px;
   }
 `;
 
 export const Container = styled.div`
   padding: 3rem calc((100vw - 1300px) / 2);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 800px;
-  max-height: 90vh;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
   @media screen and (max-width: 760px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 400px;
+    max-height: 320px;
+    flex-direction: column;
+    padding: 1rem 0rem;
   }
 `;
 
@@ -69,6 +71,7 @@ export const ColumnLeft = styled.div`
 
   @media screen and (max-width: 760px) {
     width: 85vw;
+    height: 500px;
     margin-top: 0px;
     order: 1;
 
@@ -79,7 +82,7 @@ export const ColumnLeft = styled.div`
     }
 
     &.active {
-      transform: translateX(calc(${({ reverse }) => (reverse ? "9%" : "10%")}));
+      transform: translateX(calc(${({ reverse }) => (reverse ? "8%" : "10%")}));
       transition: all 2s ease;
       opacity: 1;
     }
@@ -92,6 +95,7 @@ export const ColumnRight = styled.div`
   display: flex;
   max-height: 400px;
   justify-content: center;
+  max-width: 650px;
   align-items: center;
   z-index: 22;
 
@@ -106,9 +110,7 @@ export const ColumnRight = styled.div`
   }
 
   &.active {
-    transform: translateX(
-      calc(${({ reverse }) => (reverse ? "80% - 100%" : "100% - 80%")})
-    );
+    transform: translateX(calc(${({ reverse }) => (reverse ? "10%" : "25%")}));
     transition: all 2s ease;
     opacity: 1;
   }
@@ -137,9 +139,7 @@ export const ColumnRight = styled.div`
     }
 
     &.active {
-      transform: translateX(
-        calc(${({ reverse }) => (reverse ? "9%" : "10%")})
-      );
+      transform: translateX(calc(${({ reverse }) => (reverse ? "9%" : "10%")}));
       transition: all 2s ease;
       opacity: 1;
     }
