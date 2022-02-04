@@ -22,7 +22,7 @@ function Dropdown({ isOpen, toggle }) {
         <DropdownMenu>
           {menuData.map((item, index) => (
             <DropdownLink to={item.link} key={index}>
-              {item.title}
+              {item.title.toUpperCase()}
             </DropdownLink>
           ))}
         </DropdownMenu>

@@ -5,9 +5,9 @@ import { FaTimes } from "react-icons/fa";
 export const DropdownContainer = styled.div`
   position: fixed;
   z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #cd853f;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
   display: grid;
   align-items: center;
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
@@ -42,12 +42,14 @@ export const DropdownLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #18171c;
   font-size: 1.5rem;
   text-decoration: none;
   list-style: none;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  font-weight: 500;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 
   &:hover {
     color: #000d1a;

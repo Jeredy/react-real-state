@@ -19,23 +19,24 @@ function App() {
   };
 
   window.addEventListener("scroll", () => {
-    reveal(".reveal", 80);
-    reveal(".revealSection", 20);
+    reveal(".reveal", window.innerWidth > 480 ? 80 : 0);
+    reveal(".revealSection", window.innerWidth > 480 ? 20 : 180);
     navbarReveal();
   });
 
   function reveal(classe, revealPoint) {
     let reveals = document.querySelectorAll(classe);
-
     for (let i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let revealTop = reveals[i].getBoundingClientRect().top;
+      classe === ".revealSection" && console.log(revealTop);
 
       if (revealTop < windowHeight - revealPoint) {
         reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
       }
+      // else {
+      //   reveals[i].classList.remove("active");
+      // }
     }
   }
 

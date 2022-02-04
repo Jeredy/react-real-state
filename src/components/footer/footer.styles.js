@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 const ContentSize = css`
   height: 65vh;
   width: 100%;
+
+  @media screen and (max-width: 760px) {
+    height: 80vh;
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -14,6 +18,11 @@ export const FooterContainer = styled.div`
   justify-content: center;
   postion: relative;
   margin-top: 5rem;
+
+  @media screen and (max-width: 760px) {
+    margin-top: 0rem;
+    align-items: center;
+  }
 `;
 
 export const ImageBackground = styled.div`
@@ -22,7 +31,7 @@ export const ImageBackground = styled.div`
   position: absolute;
   z-index: 11;
 
-  background-image: url("https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("images/footer-md.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +46,20 @@ export const ImageBackground = styled.div`
       rgba(255, 255, 255, 0.6) 30%,
       rgba(255, 255, 255, 1) 100%
     );
+
+    @media screen and (max-width: 760px) {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.6) 20%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    margin-top: 15rem;
+    background-image: url("images/footer-ss.jpeg");
   }
 `;
 
@@ -48,14 +71,14 @@ export const Content = styled.div`
   z-index: 999;
 
   &.revealSection {
-    transform: translateY(4rem);
+    transform: translateY(5rem);
     position: relative;
     opacity: 0;
   }
 
   &.active {
     transform: translateY(0rem);
-    transition: all 1s ease-in;
+    transition: all 1.5s ease-in;
     opacity: 1;
   }
 
@@ -81,6 +104,10 @@ export const LogoBottomLine = styled.div`
   background: #fff;
   width: 75px;
   margin: 1rem 0rem;
+
+  @media screen and (max-width: 480px) {
+    width: 50px;
+  }
 `;
 
 export const LogoIcon = styled(SiArlo)`
@@ -97,6 +124,8 @@ export const SocialMediaContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 350px;
+  padding: 0rem 1rem;
+
   &:hover {
     cursor: pointer;
   }

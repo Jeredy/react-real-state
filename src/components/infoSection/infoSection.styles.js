@@ -4,6 +4,10 @@ export const Section = styled.div`
   width: 100%;
   height: 100%;
   padding-top: 1rem;
+
+  @media screen and (max-width: 760px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -15,6 +19,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 760px) {
     grid-template-columns: 1fr;
+    grid-template-rows: 400px;
   }
 `;
 
@@ -30,6 +35,7 @@ export const ColumnLeft = styled.div`
   max-height: 50vh;
   background: #18171c;
   color: #fff;
+
   filter: drop-shadow(
     ${({ reverse }) => (reverse ? "8px" : "-8px")} 8px 10px rgba(0, 0, 0, 0.6)
   );
@@ -55,10 +61,28 @@ export const ColumnLeft = styled.div`
 
   &.active {
     transform: translateX(
-      calc(${({ reverse }) => (reverse ? "100% - 55%" : "90% - 100%")})
+      calc(${({ reverse }) => (reverse ? "100% - 55%" : "10%")})
     );
     transition: all 2s ease;
     opacity: 1;
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 85vw;
+    margin-top: 0px;
+    order: 1;
+
+    &.reveal {
+      transform: translateX(${({ reverse }) => (reverse ? "-200px" : "200px")});
+      position: relative;
+      opacity: 0;
+    }
+
+    &.active {
+      transform: translateX(calc(${({ reverse }) => (reverse ? "9%" : "10%")}));
+      transition: all 2s ease;
+      opacity: 1;
+    }
   }
 `;
 
@@ -95,8 +119,29 @@ export const ColumnRight = styled.div`
     object-fit: cover;
 
     @media screen and (max-width: 768px) {
-      width: 90%;
-      height: 90%;
+      width: 85vw;
+      height: 100%;
+      padding: 0rem;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    width: 85vw;
+    margin-top: 0px;
+    order: 2;
+
+    &.reveal {
+      transform: translateX(${({ reverse }) => (reverse ? "-200px" : "200px")});
+      position: relative;
+      opacity: 0;
+    }
+
+    &.active {
+      transform: translateX(
+        calc(${({ reverse }) => (reverse ? "9%" : "10%")})
+      );
+      transition: all 2s ease;
+      opacity: 1;
     }
   }
 `;

@@ -60,7 +60,12 @@ function Hero({ slides }) {
             <HeroSlide key={index}>
               {index === current && (
                 <HeroSlider>
-                  <HeroImage src={slide.image} alt={slide.alt} />
+                  <HeroImage
+                    src={
+                      window.innerWidth > 480 ? slide.image.md : slide.image.ss
+                    }
+                    alt={slide.alt}
+                  />
                   <HeroContent className="heroContent">
                     <h1>{slide.title}</h1>
                     <p>{slide.price}</p>

@@ -11,7 +11,7 @@ function WorkComponent() {
             <Image src={image} />
             <h1>{title}</h1>
             <p>{text}</p>
-          </Card>
+          </Card> 
         ))}
       </CardContainer>
     </Section>

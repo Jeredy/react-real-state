@@ -10,7 +10,6 @@ import {
 function InfoSection({
   heading,
   paragraphOne,
-  paragraphTwo,
   reverse,
   buttonLabel,
   image,
@@ -26,7 +25,7 @@ function InfoSection({
           </Button>
         </ColumnLeft>
         <ColumnRight className="reveal" reverse={reverse}>
-          <img src={image} alt="home" />
+          <img src={window.innerWidth > 480 ? image.md : image.ss} alt="home" />
         </ColumnRight>
       </Container>
     </Section>

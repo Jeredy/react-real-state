@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ logo }) => (logo ? "4rem" : "0rem")} 0rem;
+  padding: 0rem 1rem;
 
   h1 {
     color: #18171c;
@@ -34,6 +35,20 @@ export const Container = styled.div`
     transform: translateY(0rem);
     transition: all 1s ease-in;
     opacity: 1;
+  }
+
+  @media screen and (max-width: 480px) {
+    &.revealSection {
+      transform: translateY(4rem);
+      position: relative;
+      opacity: 0;
+    }
+
+    &.active {
+      transform: translateY(0rem);
+      transition: all 1s ease-in;
+      opacity: 1;
+    }
   }
 `;
 

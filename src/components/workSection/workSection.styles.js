@@ -9,7 +9,7 @@ export const Section = styled.div`
   padding: 3rem;
   position: relative;
   margin-bottom: 3rem;
-  background-image: url("https://images.pexels.com/photos/1046348/pexels-photo-1046348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("images/work-section.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,6 +31,12 @@ export const Section = styled.div`
       rgba(0, 0, 0, 0.7) 100%
     );
   }
+
+  @media screen and (max-width: 480px) {
+    height: 150vh;
+    background-image: src("images/plant.png");
+    background-size: cover;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -38,13 +44,17 @@ export const CardContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Card = styled.div`
   display: flex;
   z-index: 10;
-  height: 250px;
-  padding: 2rem;
+  height: 280px;
+  padding: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -56,6 +66,7 @@ export const Card = styled.div`
   -webkit-filter: drop-shadow(0 1px 8px rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   margin: 1rem;
+  max-width: 250px;
 
   &.revealSection {
     transform: translateY(6rem);
@@ -79,6 +90,11 @@ export const Card = styled.div`
 
   p {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 250px;
+    width: 300px;
   }
 `;
 

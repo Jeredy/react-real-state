@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
+
   transition: all 0.5s ease;
 
   &.active {
@@ -19,6 +20,11 @@ export const Nav = styled.nav`
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-filter: drop-shadow(0 1px 8px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 100vw;
+    min-width: 100vw;
   }
 `;
 
@@ -42,7 +48,7 @@ const NavLink = css`
 export const LogoIcon = styled(SiArlo)`
   font-size: 2rem;
   fill: white;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   transition: all 0.5s ease;
 
   &.active {
@@ -52,6 +58,7 @@ export const LogoIcon = styled(SiArlo)`
 
 export const Logo = styled(Link)`
   ${NavLink}
+  margin-left: -1rem;
   font-style: italic;
 `;
 
