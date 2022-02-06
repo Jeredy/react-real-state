@@ -9,6 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: ${({ logo }) => (logo ? "4rem" : "0rem")} 0rem;
   padding: 0rem 1rem;
+  transition: all 1s ease-in;
 
   h1 {
     color: #18171c;
@@ -33,7 +34,6 @@ export const Container = styled.div`
 
   &.active {
     transform: translateY(0rem);
-    transition: all 1s ease-in;
     opacity: 1;
   }
 
